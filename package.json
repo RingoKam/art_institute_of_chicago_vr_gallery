@@ -1,0 +1,22 @@
+{
+  "name": "threejs-vue-vr",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "unsafe": "open -na Google\\ Chrome --args --user-data-dir=/tmp/temporary-chrome-profile-dir --disable-web-security"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "lodash": "^4.17.21",
+    "stats.js": "^0.17.0",
+    "three": "^0.128.0",
+    "three-mesh-ui": "^5.2.1",
+    "vue": "^3.2.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.0",
+    "vite": "^2.5.10"
+  }
+}
