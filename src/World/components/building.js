@@ -1,4 +1,5 @@
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { MeshBasicMaterial, Vector3 } from 'three'
 
 const loader = new GLTFLoader();
 
@@ -20,6 +21,13 @@ export const createBuilding = () => {
                 gltf.scenes; // Array<THREE.Group>
                 gltf.cameras; // Array<THREE.Camera>
                 gltf.asset; // Object
+                var newMaterial = new MeshBasicMaterial({color: 0xFFFFFF});
+                gltf.scene.scale.x = 4.5
+                gltf.scene.scale.y = 4.5
+                gltf.scene.scale.z = 4.5
+                gltf.scene.traverse((o) => {
+                    if (o.isMesh) o.material = newMaterial;
+                  });
                 resolve(gltf)
             },
             // called while loading is progressing
