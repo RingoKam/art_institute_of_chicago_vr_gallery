@@ -11,6 +11,7 @@ import { Resizer } from './systems/resizer.js';
 import { Loop } from './systems/loop.js';
 import { MangaList } from './components/manga-list'
 import { DirectionalLight } from 'three'
+import { createBuilding } from './components/building'
 
 class World {
   constructor(container) {
@@ -32,10 +33,14 @@ class World {
     // const { ambientLight , mainLight } = createLights();
     const meshGroup = createMeshGroup();
 
-
     meshGroup.position.z = -10
     this.loop.updatables.push(controls, meshGroup);
     this.scene.add(meshGroup);
+
+    createBuilding().then(gltf => {
+      this.scene.add(gltf.scene)
+    })
+
     const manga = new MangaList();
     this.scene.add(manga.mangaListGroup);
 
