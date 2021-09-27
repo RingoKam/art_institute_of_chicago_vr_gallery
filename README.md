@@ -10,6 +10,9 @@ music performed by Alena Smirnova under CC license from [Free Music Archive](htt
 ## Tech Stack 
 Vue 3 + Vite + ThreeJS
 
+## TODO
+* Proper clean up on class to prevent memory leak
+
 ## Dev
 to start development `npm run dev`
 

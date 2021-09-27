@@ -22,9 +22,6 @@ export const createBuilding = () => {
                 gltf.cameras; // Array<THREE.Camera>
                 gltf.asset; // Object
                 var newMaterial = new MeshBasicMaterial({color: 0xFFFFFF});
-                gltf.scene.scale.x = 4.5
-                gltf.scene.scale.y = 4.5
-                gltf.scene.scale.z = 4.5
                 gltf.scene.traverse((o) => {
                     if (o.isMesh) o.material = newMaterial;
                   });

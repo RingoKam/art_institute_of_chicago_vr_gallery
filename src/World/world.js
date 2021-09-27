@@ -10,28 +10,42 @@ import { createControls } from './systems/controls.js';
 import { createRenderer } from './systems/renderer.js';
 import { Resizer } from './systems/resizer.js';
 import { Loop } from './systems/loop.js';
+import { BuildingSystem } from './systems/building_system'
 import { MangaList } from './components/manga-list'
 import { createBuilding } from './components/building'
 
 class World {
+
   constructor(container) {
     this.camera = createCamera();
     this.renderer = createRenderer();
     this.scene = createScene();
-    
+
+    this.loop = new Loop(this.camera, this.scene, this.renderer);
+
     //add VR hands
     const hands = createVRHands(this.renderer)
     hands.forEach(h => this.scene.add(h))
-
-    this.loop = new Loop(this.camera, this.scene, this.renderer);
     container.append(this.renderer.domElement);
+
+    //add floor
     const floor = createFloor()
     floor.position.set(0, 0, 0)
     this.scene.add(floor)
+
+    this.loop.updatables.push(new BuildingSystem(this.camera, this.scene)) 
+    // createBuilding().then(gltf => {
+    //   const manga = new MangaList();
+    //   gltf.scene.add(manga.mangaListGroup)
+    //   gltf.scene.scale.set(5,5,5)
+    //   this.scene.add(gltf.scene)
+    // })
+
     // const mainLight = new DirectionalLight('white', 5);
     // mainLight.position.set(10, 10, -10);
 
-    const controls = createControls(this.camera, this.renderer.domElement);
+    this.controls = createControls(this.camera, this.renderer.domElement);
+    this.loop.updatables.push(this.controls)
 
     // const { ambientLight , mainLight } = createLights();
     // const meshGroup = createMeshGroup();
@@ -39,14 +53,6 @@ class World {
     // this.scene.add(meshGroup);
     // this.loop.updatables.push(controls, meshGroup);
 
-
-
-    createBuilding().then(gltf => {
-      this.scene.add(gltf.scene)
-    })
-
-    const manga = new MangaList();
-    this.scene.add(manga.mangaListGroup);
 
     let vrButton = VRButton.createButton(this.renderer)
     container.appendChild(vrButton);

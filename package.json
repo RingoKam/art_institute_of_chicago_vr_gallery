@@ -4,12 +4,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
-    "unsafe": "open -na Google\\ Chrome --args --user-data-dir=/tmp/temporary-chrome-profile-dir --disable-web-security"
+    "serve": "vite preview"
   },
   "dependencies": {
     "axios": "^0.21.4",
     "lodash": "^4.17.21",
+    "mitt": "^3.0.0",
     "stats.js": "^0.17.0",
     "three": "^0.128.0",
     "three-mesh-ui": "^5.2.1",

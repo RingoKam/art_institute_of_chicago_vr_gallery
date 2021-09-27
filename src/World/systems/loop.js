@@ -25,6 +25,7 @@ class Loop {
   }
 
   tick() {
+    // console.log(this.camera.position)
     // only call the getDelta function once per frame!
     const delta = clock.getDelta();
 

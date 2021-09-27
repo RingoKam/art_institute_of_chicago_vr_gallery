@@ -1,0 +1,41 @@
+# Made using Asset Forge (2.1.1)
+
+:materials
+
+[name:stone;color:RGBA(1.000, 1.000, 1.000, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+[name:stoneDark;color:RGBA(0.786, 0.786, 0.786, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+
+:models
+
+[name:;collection:Walls;type:wall_border;position:(3.0000, 0.0000, 2.0000);rotation:(0.0000, 270.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:wall_border;position:(3.0000, 0.0000, 4.0000);rotation:(0.0000, 270.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:wall_border;position:(3.0000, 0.0000, 3.0000);rotation:(0.0000, 270.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:wall_border;position:(-4.0000, 0.0000, 2.0000);rotation:(0.0000, 270.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:wall_border;position:(-4.0000, 0.0000, 4.0000);rotation:(0.0000, 270.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:wall_corner;position:(3.0000, 0.0000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone;]
+[name:;collection:Walls;type:wall_border;position:(2.0000, 0.0000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:doorway_round;position:(0.0000, 0.0000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:wall_border;position:(1.0000, 0.0000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:wall_corner;position:(-3.0000, 0.0000, 1.0000);rotation:(0.0000, 90.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone;]
+[name:;collection:Walls;type:wall_corner;position:(3.0045, 0.0000, 4.9941);rotation:(0.0000, 270.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone;]
+[name:;collection:Walls;type:wall_border;position:(-1.9955, 0.0000, 4.9942);rotation:(0.0000, 180.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:wall_border;position:(-0.9955, 0.0000, 4.9941);rotation:(0.0000, 180.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:doorway_round;position:(0.0045, 0.0000, 4.9941);rotation:(0.0000, 180.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:wall_border;position:(1.0045, 0.0000, 4.9942);rotation:(0.0000, 180.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:wall_border;position:(2.0045, 0.0000, 4.9942);rotation:(0.0000, 180.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Roofs;type:roof_flatHole;position:(3.0000, 1.0000, 3.0181);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 5.3900);group:;locked:False;hidden:False;materials:stone;]
+[name:;collection:Roofs;type:roof_flatHole;position:(1.9000, 1.0000, 3.0181);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 5.3900);group:;locked:False;hidden:False;materials:stone;]
+[name:;collection:Walls;type:wall_border;position:(-4.0000, 0.0000, 3.0000);rotation:(0.0000, 270.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Roofs;type:roof_flatHole;position:(-3.0000, 1.0000, 3.0181);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 5.3900);group:;locked:False;hidden:False;materials:stone;]
+[name:;collection:Roofs;type:roof_flatHole;position:(-1.9000, 1.0000, 3.0181);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 5.3900);group:;locked:False;hidden:False;materials:stone;]
+[name:;collection:Roofs;type:roof_flatHole;position:(-0.6313, 1.0000, 3.0181);rotation:(0.0000, 0.0000, 0.0000);scale:(1.3000, 1.0000, 5.3900);group:;locked:False;hidden:False;materials:stone;]
+[name:;collection:Roofs;type:roof_flatHole;position:(0.6200, 1.0000, 3.0181);rotation:(0.0000, 0.0000, 0.0000);scale:(1.3200, 1.0000, 5.3900);group:;locked:False;hidden:False;materials:stone;]
+[name:;collection:Walls;type:wall_corner;position:(-2.9955, 0.0000, 4.9942);rotation:(0.0000, 180.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone;]
+[name:;collection:Walls;type:wall;position:(1.5500, 0.0000, 4.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.8000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone;]
+[name:;collection:Walls;type:wall;position:(-1.5500, 0.0000, 3.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.8000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone;]
+[name:;collection:Walls;type:wall_border;position:(-2.0000, 0.0000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:wall_border;position:(-1.0000, 0.0000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:column_classic;position:(0.0000, 0.0000, 0.7000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:column_classic;position:(0.0000, 0.0000, 6.4000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:column_classic;position:(1.0000, 0.0000, 0.7000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]
+[name:;collection:Walls;type:column_classic;position:(1.0000, 0.0000, 6.4000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:stone+stoneDark;]

@@ -5,8 +5,7 @@
 
 <script setup>
 import { onMounted } from "vue";
-import { World } from './World'
-import { VRButton } from 'three/examples/jsm/webxr/VRButton.js';
+import { World } from './World/world'
 
 onMounted(() => {
   const container = document.querySelector(".experience")

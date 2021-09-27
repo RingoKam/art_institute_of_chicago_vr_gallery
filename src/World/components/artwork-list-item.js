@@ -5,9 +5,8 @@ import { generateImageUrl } from "../../transport/image";
 const height = 1 / 2
 const width = 1.5 / 2
 
-export const createMangaListItem = ({ id, coverUrl, title }) => {
+export const createArtworkListItem = ({ id, coverUrl, title }) => {
     let loader = new THREE.TextureLoader();
-   
     let container = new ThreeMeshUI.Block({
         height,
         width,

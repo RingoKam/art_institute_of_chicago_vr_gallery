@@ -5,12 +5,12 @@ export const useArtwork = () => {
 
     let artwork = ref([]);
     let page = ref(0);
-    let limit = ref(12);
+    let limit = ref(13);
 
     const fetchArtwork = (fields = "id,artist_display,title,image_id") => {
         return getArtWorkList({
             limit: limit.value, 
-            page: limit.page,
+            page: page.value,
             fields
         }).then(({ data }) => {
             artwork.value = data.data;
