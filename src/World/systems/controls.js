@@ -14,7 +14,6 @@ function createControls(camera, canvas) {
   // controls.dragToLook = true;
   // controls.movementSpeed = 10;
   // controls.rollSpeed = 0.5;
-
   
   let moveForward = false
   let moveBackward = false

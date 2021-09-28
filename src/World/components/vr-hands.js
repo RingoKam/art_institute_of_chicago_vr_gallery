@@ -35,5 +35,5 @@ export const createVRHands = (renderer) => {
     controller1.add( line.clone() );
     controller2.add( line.clone() );
 
-    return [controller1, controller2, controllerGrip1, controllerGrip2]
+    return { controller1, controller2, controllerGrip1, controllerGrip2 }
 };

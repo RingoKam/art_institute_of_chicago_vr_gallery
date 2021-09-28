@@ -1,4 +1,5 @@
 import { Clock } from 'three';
+import TWEEN from '@tweenjs/tween.js/dist/tween.esm.js';
 
 const clock = new Clock();
 
@@ -32,7 +33,7 @@ class Loop {
     // console.log(
     //   `The last frame rendered in ${delta * 1000} milliseconds`,
     // );
-
+    TWEEN.update(delta * 1000);
     for (const object of this.updatables) {
       object.tick(delta);
     }
