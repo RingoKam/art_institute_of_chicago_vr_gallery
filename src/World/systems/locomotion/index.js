@@ -60,24 +60,26 @@ export class Locomotion {
         this.blinkerSphere = createBlinkerSphere()
         this.camera.add(this.blinkerSphere)
 
+        emitter.on("*", (type, e) => console.log(type, e))
         //rotation
-        emitter.on('axes0MoveMiddle', this.handleMove, true);
-        emitter.on('axes2MoveMiddle', this.handleMove, true);
+        emitter.on('axes0MoveMiddle', (e) => this.handleMove(e), true);
+        emitter.on('axes2MoveMiddle', (e) => this.handleMove(e), true);
 
         //movement
-        emitter.on('axes1MoveMiddle', this.handleUp, true);
-        emitter.on('axes3MoveMiddle', this.handleUp, true);
-        emitter.on('axes1MoveEnd', this.handleUpEnd, true);
-        emitter.on('axes3MoveEnd', this.handleUpEnd, true);
+        emitter.on('axes1MoveMiddle', (e) => this.handleUp(e), true);
+        emitter.on('axes3MoveMiddle', (e) => this.handleUp(e), true);
+        emitter.on('axes1MoveEnd', (e) => this.handleUpEnd(e), true);
+        emitter.on('axes3MoveEnd', (e) => this.handleUpEnd(e), true);
 
         this.controller1.addEventListener('selectstart', (e) => this.onSelectStart(e));
         this.controller1.addEventListener('selectend', (e) =>  this.onSelectEnd(e));
-        this.controller2.addEventListener('selectstart', (e) => this.onSelectStart(e));
-        this.controller2.addEventListener('selectend', (e) => this.onSelectEnd(e));
+        // this.controller2.addEventListener('selectstart', (e) => this.onSelectStart(e));
+        // this.controller2.addEventListener('selectend', (e) => this.onSelectEnd(e));
     }
 
     handleMove({ detail }) {
         // Turn left
+        console.log(arguments)
         if (detail.value > 0) {
             this.cameraGroup.rotation.y -= Math.PI / 4;
         }
@@ -88,12 +90,14 @@ export class Locomotion {
     }
 
     handleUp({ detail }) {
+        console.log(arguments)
         if (detail.value < 0) {
             this.onSelectStart(detail.controller);
         }
     }
 
     handleUpEnd({ detail }) {
+        console.log(arguments)
         this.onSelectEnd(detail.controller);
     }
 

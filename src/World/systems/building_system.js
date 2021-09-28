@@ -1,6 +1,9 @@
 import { Vector3 } from 'three'
 import { createBuilding } from '../components/building'
 import { createArtworkList } from "../components/artwork-list"
+import { createLogo } from '../components/logo'
+import TWEEN from '@tweenjs/tween.js/dist/tween.esm.js';
+
 const distance = 50
 
 export class BuildingSystem {
@@ -13,7 +16,8 @@ export class BuildingSystem {
         this.buildingArrays = []
         this.distance = -50
 
-        this.addBuilding(0);
+        this.building = null
+        this.addBuilding(-20);
     }
 
     tick() {
@@ -29,16 +33,31 @@ export class BuildingSystem {
     addBuilding(zPosition) {
         //add wall
         //add trees
-        createBuilding().then(
-            (gltf) => {
-                //add list
-                const list = createArtworkList(this.page)
-                gltf.scene.add(list);
-
-                gltf.scene.scale.set(5, 5, 5)
-                this.scene.add(gltf.scene)
-                gltf.scene.position.set(0, 0, zPosition) 
-            }
+        (
+            this.building === null 
+            ? createBuilding().then((scene) => { this.building = scene; return scene; })
+            : Promise.resolve(this.building.clone())
         )
+            .then(
+                (scene) => {
+                    //add list
+                    const list = createArtworkList(this.page)
+                    scene.add(list);
+
+                    //kigi
+                    const logo = createLogo()
+                    scene.add(logo)
+
+                    logo.position.set(0, 1.5, 0.5)
+                    scene.scale.set(5, 5, 5)
+                    this.scene.add(scene)
+
+                    scene.position.set(0, -10, zPosition)
+                    new TWEEN.Tween(scene.position)
+                        .to({ y: 0 })
+                        .easing(TWEEN.Easing.Quadratic.Out)
+                        .start()
+                }
+            )
     }
 }
