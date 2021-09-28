@@ -1,4 +1,4 @@
-import { Vector3 } from "three";
+import { Vector3, Group } from "three";
 import { watch, effectScope } from "vue";
 import { useArtwork } from "../../api/artwork";
 import { emitter, createDestroyEvent } from "../emitter"
@@ -27,19 +27,20 @@ const positions = [
 
 export const createArtworkList = (page_number) => {
     let scope = effectScope();
-    let artWorkListGroup = new THREE.Group();
+    let artWorkListGroup = new Group();
     const destroyEvent = createDestroyEvent(page_number);
     
     const { fetchArtwork, artwork } = useArtwork();
-    fetchArtwork();
+    fetchArtwork(page_number);
 
     scope.run(() => {
         watch(artwork, (val) => {
             //clear out the children
-            this.artWorkListGroup.children.forEach((child) => child.remove());
+            artWorkListGroup.children.forEach((child) => child.remove());
 
             val.map((v, i) => {
-                let item = createMangaListItem({
+                if(!v.image_id) return
+                let item = createArtworkListItem({
                     coverUrl: v.image_id,
                     title: v.title,
                     id: v.id,
@@ -48,7 +49,7 @@ export const createArtworkList = (page_number) => {
                 if(!posData) return 
                 item.position.set(posData[0].x, posData[0].y, posData[0].z)
                 item.rotation.set(posData[1].x, posData[1].y, posData[1].z) 
-                this.artWorkListGroup.add(item)
+                artWorkListGroup.add(item)
             });
         });
     });

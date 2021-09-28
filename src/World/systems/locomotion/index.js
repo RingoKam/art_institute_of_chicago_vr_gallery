@@ -185,9 +185,7 @@ export class Locomotion {
             .easing(TWEEN.Easing.Quadratic.Out)
             .onStart(() => { console.log("started") })
             .onComplete(() => {
-
                 // Do the teleport
-                console.log(this.cameraGroup.position)
                 this.cameraGroup.position.add(offset);
 
                 // Fade back

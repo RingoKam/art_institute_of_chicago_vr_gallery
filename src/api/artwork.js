@@ -7,7 +7,8 @@ export const useArtwork = () => {
     let page = ref(0);
     let limit = ref(13);
 
-    const fetchArtwork = (fields = "id,artist_display,title,image_id") => {
+    const fetchArtwork = (pg = 0, fields = "id,artist_display,title,image_id") => {
+        page.value = pg
         return getArtWorkList({
             limit: limit.value, 
             page: page.value,

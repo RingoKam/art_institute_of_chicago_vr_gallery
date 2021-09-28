@@ -14,10 +14,14 @@ import { Loop } from './systems/loop.js';
 import { BuildingSystem } from './systems/building_system'
 import { Gamepad } from "./systems/gamepad"
 import { Locomotion } from './systems/locomotion'
+import { loadFont } from './load-font'
 
 class World {
 
   constructor(container) {
+    //load three roboto font
+    loadFont()
+    
     this.camera = createCamera();
     this.renderer = createRenderer();
     this.scene = createScene();
@@ -38,8 +42,9 @@ class World {
     const floor = createFloor()
     floor.position.set(0, 0, 0)
     this.scene.add(floor)
+    this.camera.getWorldPosition()
 
-    this.loop.updatables.push(new BuildingSystem(this.camera, this.scene)) 
+    this.loop.updatables.push(new BuildingSystem(this.viewer, this.scene, this.camera)) 
     this.loop.updatables.push(new Gamepad(this.renderer))
     // createBuilding().then(gltf => {
     //   const manga = new MangaList();
@@ -54,8 +59,8 @@ class World {
     const locomotion = new Locomotion(this.viewer, this.camera, this.scene, this.renderer, hands.controller1, hands.controller2)
     this.loop.updatables.push(locomotion)
 
-    // this.controls = createControls(this.camera, this.renderer.domElement);
-    // this.loop.updatables.push(this.controls)
+    this.controls = createControls(this.camera, this.renderer.domElement);
+    this.loop.updatables.push(this.controls)
 
     // const { ambientLight , mainLight } = createLights();
     // const meshGroup = createMeshGroup();
