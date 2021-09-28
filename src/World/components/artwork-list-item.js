@@ -43,9 +43,9 @@ export const createArtworkListItem = ({ id, coverUrl, title }) => {
     let textContainer = new ThreeMeshUI.Block({
         width: width,
         height: 0.1,
-        padding: 0.05,
+        padding: 0.01,
         justifyContent: 'center',
-        alignContent: 'left',
+        alignContent: 'center',
         fontFamily: 'Roboto',
         fontTexture: 'Roboto'
     });
