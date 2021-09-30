@@ -1,6 +1,6 @@
 # Art Institude of Chicago VR Gallery
 ![image](https://user-images.githubusercontent.com/10913199/135030775-a788bcc6-8e4d-4852-9aef-bb3d9301a3e3.png)
-Web VR Gallery that display art work from art institude of chicago.
+Web VR Gallery that display art work from Art Institude of Chicago.
 
 
 [DEMO LINK](https://ringokam.github.io/art_institute_of_chicago_vr_gallery/) 
