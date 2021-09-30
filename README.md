@@ -2,6 +2,7 @@
 ![image](https://user-images.githubusercontent.com/10913199/135030775-a788bcc6-8e4d-4852-9aef-bb3d9301a3e3.png)
 
 [DEMO LINK](https://ringokam.github.io/art_institute_of_chicago_vr_gallery/)
+
 [SLIDE LINK](https://docs.google.com/presentation/d/1LddIOGC3t5MbyAYKPNHLqGiAzrDPbhlzemk5JwnRYYk/edit?usp=sharing)
 
 ## Art Source
