@@ -16,9 +16,9 @@ music performed by Alena Smirnova under CC license from [Free Music Archive](htt
 Vue 3 + Vite + ThreeJS
 
 ## TODO
-* Proper clean up on class to prevent memory leak
 * Proper image scale 
-
+* Add Audio
+* Raycaster to access Art detail
 
 ## Dev
 to start development `npm run dev`
