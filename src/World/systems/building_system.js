@@ -35,7 +35,7 @@ export class BuildingSystem {
         //add trees
         (
             this.building === null 
-            ? createBuilding().then((scene) => { this.building = scene; return scene; })
+            ? createBuilding().then((scene) => { this.building = scene.clone(); return scene; })
             : Promise.resolve(this.building.clone())
         )
             .then(

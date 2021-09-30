@@ -46,15 +46,6 @@ class World {
 
     this.loop.updatables.push(new BuildingSystem(this.viewer, this.scene, this.camera)) 
     this.loop.updatables.push(new Gamepad(this.renderer))
-    // createBuilding().then(gltf => {
-    //   const manga = new MangaList();
-    //   gltf.scene.add(manga.mangaListGroup)
-    //   gltf.scene.scale.set(5,5,5)
-    //   this.scene.add(gltf.scene)
-    // })
-
-    // const mainLight = new DirectionalLight('white', 5);
-    // mainLight.position.set(10, 10, -10);
 
     const locomotion = new Locomotion(this.viewer, this.camera, this.scene, this.renderer, hands.controller1, hands.controller2)
     this.loop.updatables.push(locomotion)
@@ -62,23 +53,12 @@ class World {
     this.controls = createControls(this.camera, this.renderer.domElement);
     this.loop.updatables.push(this.controls)
 
-    // const { ambientLight , mainLight } = createLights();
-    // const meshGroup = createMeshGroup();
-    // meshGroup.position.z = -10
-    // this.scene.add(meshGroup);
-    // this.loop.updatables.push(controls, meshGroup);
-
-
     let vrButton = VRButton.createButton(this.renderer)
     container.appendChild(vrButton);
 
     this.resizer = new Resizer(container, this.camera, this.renderer);
   }
-
-  render() {
-    this.renderer.render(this.scene, this.camera);
-  }
-
+  
   start() {
     this.loop.start();
   }
