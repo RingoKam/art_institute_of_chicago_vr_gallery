@@ -22,6 +22,7 @@ Vue 3 + Vite + ThreeJS
 * Add Audio
 * Raycaster to access Art detail
 * Ensure app works for both VR and Web
+* Floating Origin issue when user get too far away from transform origin
 
 ## Dev
 to start development `npm run dev`
